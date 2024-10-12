@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+
+li,
+a {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  background-color: bisque;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10% 0px 4%;
+  height: 72px;
+}
+
+.logo {
+  margin-left: -80px;
+  cursor: pointer;
+  width: 325px;
+  height: 230px;
+}
+.nav_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.nav_links {
+  list-style: none;
+}
+.nav_links li {
+  display: inline-block;
+  padding: 0px 32px;
+  margin-top: 7px;
+}
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+  color: brown;
+  padding: 4px;
+}
+.nav_links li a:hover {
+  color: rgb(0, 0, 0);
+  background-color: #e6c97d;
+  border-radius: 3px;
+}
+.buttn {
+  font-size: 20px;
+}
+.nav_links1 {
+  list-style: none;
+  background-color: burlywood;
+  border: 1px solid black;
+  padding: 0px 8px;
+  border-radius: 3px;
+  padding-top: 6px;
+}
+
+.nav_links1 li a {
+  color: black;
+  padding-top: 3px;
+}
+
+.nav_links1:hover {
+  background-color: rgb(223, 172, 106);
+}
+
+.hamburger {
+  display: none;
+  z-index: 4;
+}

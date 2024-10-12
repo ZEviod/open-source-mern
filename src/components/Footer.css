@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eef8ff;
+}
+
+.footer {
+  width: 100%;
+  background: linear-gradient(to right, rgb(150, 106, 23), #fbcf6f);
+  color: #fff;
+  padding: 100px 0px 30px;
+  border-top-left-radius: 125px;
+  font-size: 13px;
+}
+.row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+.text-icon {
+  font-size: 15px;
+  margin-top: -95px;
+}
+
+.goof {
+  width: 300px;
+  height: 200px;
+  margin-top: -10px;
+}
+
+.logo_footer {
+  margin-top: -160px;
+  margin-left: -50px;
+  position: relative;
+  width: 350px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.col h3 {
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+.email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.social-icons .fa-brands {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
