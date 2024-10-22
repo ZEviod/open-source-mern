@@ -1,3 +1,4 @@
+/* Global Reset and Font Settings */
 * {
   margin: 0;
   padding: 0;
@@ -5,19 +6,23 @@
   box-sizing: border-box;
 }
 
+/* Background Color for the Body */
 body {
   background-color: #eef8ff;
 }
 
+/* Footer Container Styling */
 .footer {
   width: 100%;
   background: linear-gradient(to right, rgb(150, 106, 23), #fbcf6f);
   color: #fff;
-  padding: 100px 0px 30px;
-  border-top-left-radius: 125px;
+  padding: 60px 20px 30px;
+  border-top-left-radius: 80px;
   font-size: 13px;
 }
-.row {
+
+/* Footer Layout using Flexbox */
+.footer-content {
   width: 85%;
   margin: auto;
   display: flex;
@@ -25,58 +30,92 @@ body {
   align-items: flex-start;
   justify-content: space-between;
 }
-.col {
-  flex-basis: 25%;
-  padding: 10px;
-}
-.text-icon {
-  font-size: 15px;
-  margin-top: -95px;
+
+/* Column Styling for Responsive Layout */
+.footer-col {
+  flex-basis: 23%;
+  margin: 10px 0;
 }
 
-.goof {
-  width: 300px;
-  height: 200px;
-  margin-top: -10px;
-}
-
-.logo_footer {
-  margin-top: -160px;
-  margin-left: -50px;
-  position: relative;
-  width: 350px;
-  height: 300px;
+/* Footer Logo and Description Styling */
+.logo-footer {
+  width: 180px;
+  height: auto;
   margin-bottom: 10px;
 }
 
-.col h3 {
-  width: fit-content;
-  margin-bottom: 40px;
-  position: relative;
-}
-.email-id {
-  width: fit-content;
-  border-bottom: 1px solid #ccc;
+.footer-description {
+  font-size: 20px;
+  line-height: 1.6;
 }
 
-ul li {
-  list-style: none;
-  margin-bottom: 12px;
-}
-
-ul li a {
-  text-decoration: none;
-  color: #fff;
-}
-.social-icons .fa-brands {
-  width: 40px;
-  height: 40px;
+/* Social Media Icons Styling */
+.social-icons a {
+  display: inline-block; 
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   text-align: center;
-  line-height: 40px;
-  font-size: 20px;
+  line-height: 35px;
+  /* font-size: 18px; */
   color: #000;
   background: #fff;
-  margin-right: 15px;
-  cursor: pointer;
+  margin-right: 10px; 
+  transition: all 0.3s ease; 
+}
+
+.social-icons a:hover {
+  color: #fff;
+  background: rgb(150, 106, 23);
+}
+
+/* Column Heading Styling */
+.footer-col h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Contact Details and Email Styling */
+.contact-col p {
+  margin: 5px 0;
+}
+
+.email-id {
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+/* Link Styles */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #fbcf6f;
+}
+
+.map-col{
+  min-width: 250px;
+}
+
+/* Map Styling */
+.location-map {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  border: none;
+  margin-top: 10px;
 }
