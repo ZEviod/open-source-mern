@@ -190,11 +190,13 @@
   max-width: 100vw;
   /* max-height: 25vh; */
   margin: auto;
-  padding: 20px;
+  padding-bottom: 64px;
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 2rem;
   justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .client {
@@ -211,7 +213,16 @@
   width: 100%;
   height: 100px;
 }
-.client-gradient svg{
+.client-gradient-second{
+  position: absolute;
+
+  width: 100%;
+  height: 100px;
+  transform: rotate(180deg);
+  bottom: -100px;
+}
+.client-gradient svg,
+.client-gradient-second svg{
   height: 100px;
   width: 100%;
 }
@@ -219,12 +230,16 @@
   background-color: rgb(255, 255, 255);
   color: #000;
   text-align: center;
-  padding: 5rem;
-  padding-bottom: 44px;
+  /* padding: 64px 32px;
+  padding-bottom: 24px; */
+  padding-inline: 24px;
+  padding-top: 48px;
+  padding-bottom: 16px;
   margin-top: 4%;
   border-radius: 8px;
   box-shadow: 10px 10px 32px #dedede;
-  max-width: 27vw;
+  /* max-width: 27vw; */
+  width: 380px;
 }
 
 .client_card:hover {
@@ -237,15 +252,25 @@
 
 
 .client h1 {
-  font-size: 44px;
-  font-weight: 200;
-  margin-bottom: 1%;
+  text-align: center;
+  font-family: "Poppins", serif;
+  font-style: normal;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+  font-size: 2.2rem;
 }
 
 .para_gap1 {
   margin-bottom: 5px;
 }
-
+.client_content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
 .para_gap2 {
   margin-bottom: 30px;
 }
@@ -272,8 +297,8 @@
 }
 
 .client_img {
-  width: 35%;
-  height: 25%;
+  width: 64px;
+  height: 64px;
   border-style: solid;
   border-color: #03630e;
   border-radius: 100px;
@@ -297,7 +322,8 @@
     flex-wrap: wrap;
   }
   .client_card {
-    padding: 10px;
+    /* padding: 64px; */
+   
   }
 }
 
@@ -309,6 +335,8 @@
   }
 
   .client_card {
-    max-width: 60vw;
+    padding-inline: 24px;
+    padding-block: 48px;
+    max-width: 90vw;
   }
 }

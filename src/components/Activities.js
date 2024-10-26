@@ -8,6 +8,7 @@ const Activities = () => {
     <>
       <div className="activities">
         <h1>Activities</h1>
+        <samp className="bar"></samp>
         <div className="newFex">
           <div className="card">
             <div className="content">
@@ -272,7 +273,7 @@ const Activities = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <rect width='100%'  height="100" fill="url(#paint0_linear_516_76)" />
+            <rect width="100%" height="100" fill="url(#paint0_linear_516_76)" />
             <defs>
               <linearGradient
                 id="paint0_linear_516_76"
@@ -308,14 +309,16 @@ const Activities = () => {
               through pottery techniques with ease. Loved the therapeutic aspect
               and left feeling accomplished!
             </p>
-            <img
-              className="client_img client_img1"
-              src={img1}
-              alt=""
-              loading="lazy"
-            ></img>
-            <samp className="bar_cc"></samp>
-            <p>Mihir Bohra</p>
+              <samp className="bar_cc"></samp>
+            <div className="client_content">
+              <img
+                className="client_img client_img1"
+                src={img1}
+                alt=""
+                loading="lazy"
+              ></img>
+              <p>Mihir Bohra</p>
+            </div>
           </div>
           <div className="client_card">
             <div className="quote">
@@ -335,14 +338,16 @@ const Activities = () => {
               by their encouragement. A perfect blend of learning and
               relaxation.
             </p>
-            <img
-              className="client_img client_img2"
-              src={img1}
-              alt=""
-              loading="lazy"
-            ></img>
             <samp className="bar_cc"></samp>
-            <p>Ashish Gandhi</p>
+            <div className="client_content">
+              <img
+                className="client_img client_img2"
+                src={img1}
+                alt=""
+                loading="lazy"
+              ></img>
+              <p>Ashish Gandhi</p>
+            </div>
           </div>
           <div className="client_card">
             <div className="quote">
@@ -361,16 +366,40 @@ const Activities = () => {
               between guidance and freedom. The studio had everything I needed,
               and the instructor's passion was contagious.
             </p>
-            <img
-              className="client_img client_img3"
-              src={img1}
-              alt=""
-              loading="lazy"
-            ></img>
             <samp className="bar_cc"></samp>
-            <p>Abhineet Dubey</p>
+            <div className="client_content">
+              <img
+                className="client_img client_img3"
+                src={img1}
+                alt=""
+                loading="lazy"
+              ></img>
+              <p>Abhineet Dubey</p>
+            </div>
           </div>
         </div>
+        <figure className="client-gradient-second">
+          <svg
+            viewBox="0 0 100% 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="100%" height="100" fill="url(#paint0_linear_516_76)" />
+            <defs>
+              <linearGradient
+                id="paint0_linear_516_76"
+                x1="400"
+                y1="0"
+                x2="400"
+                y2="100"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#eef8ff" />
+                <stop offset="1" stopColor="#E6C97D" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </figure>
       </div>
     </>
   );
