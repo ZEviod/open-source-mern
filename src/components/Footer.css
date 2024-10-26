@@ -21,10 +21,13 @@ body {
   font-size: 13px;
   margin-top: 148px;
 }
+.footer p {
+  font-family: "Poppins", serif;
 
+}
 /* Footer Layout using Flexbox */
 .footer-content {
-  width: 85%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -34,7 +37,7 @@ body {
 
 /* Column Styling for Responsive Layout */
 .footer-col {
-  flex-basis: 23%;
+  flex-basis: 100%;
   margin: 10px 0;
 }
 
@@ -51,6 +54,9 @@ body {
 }
 
 /* Social Media Icons Styling */
+.social-icons{
+  margin-top: 1rem;
+}
 .social-icons a {
   display: inline-block; 
   width: 30px;
@@ -80,7 +86,10 @@ body {
 .contact-col p {
   margin: 5px 0;
 }
-
+.contact-col p a{
+  color: #eef8ff;
+  font-size: 14px;
+}
 .email-id {
   display: inline-block;
   border-bottom: 1px solid #ccc;
@@ -109,14 +118,28 @@ body {
 }
 
 .map-col{
+  width: 100%;
   min-width: 250px;
+  border-radius: 4px;
+  margin-inline: auto;
+}
+.map-col h3, .footer-col h3{
+  font-family: "Poppins", serif;
 }
 
 /* Map Styling */
 .location-map {
   width: 100%;
-  max-width: 300px;
-  height: 200px;
+  /* max-width: 300px; */
+  height: 300px;
   border: none;
   margin-top: 10px;
+}
+@media screen and (min-width: 624px) {
+  .footer-col{
+    flex-basis: 23%;
+  }
+  .footer-content, .map-col{
+    width: 85%;
+  }
 }
