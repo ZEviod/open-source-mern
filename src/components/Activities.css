@@ -242,6 +242,11 @@
   width: 380px;
 }
 
+.client_card > p, .client_content > p{
+  font-family: "Poppins", serif ;
+  font-size: 14px;
+  opacity: 0.9;
+}
 .client_card:hover {
   cursor: pointer;
   transform: translateY(-20px);
