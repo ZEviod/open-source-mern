@@ -1,9 +1,29 @@
+.nav_links1 {
+  list-style: none;
+  background-color: rgb(223, 163, 84);
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #eee;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-family: "Poppins", serif;
+  font-style: normal;
+}
+
+
+.nav_links1:hover {
+  background-color: rgb(223, 172, 106);
+}
+
+
 .button-50 {
   background-color: rgb(0, 0, 0);
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  margin: 50px 5px 10px 0;
+  /* margin: 50px 5px 10px 0; */
   overflow: visible;
   font-size: 24px;
   text-align: center;
@@ -19,38 +39,69 @@
 }
 
 body {
-  margin: 2px;
-  padding: 2px;
   background-color: #fffdd0;
 }
+.about{
+  height: calc(100dvh - 72px);
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)),
+    url(../../public/images/heroBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    background-position: bottom ;
+}
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  width: 95%;
+  margin-inline: auto;
+  height: 100%;
+  gap: 2rem;
 }
 
-.text {
-  flex: 1;
-  padding: 160px 340px;
-  border: 2px solid #e6c97d;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)),
-    url(../assets/file.jpg);
-  background-repeat: no-repeat;
-  background-size: 1510px 710px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+/* .ff-poppins{
+  font-family: "Poppins", serif;
+  font-style: normal;
+} */
+.text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.text h1, p
+{
+  font-family: "Poppins", serif;
+  font-style: normal;
+  color: #eee;
   text-align: center;
 }
-
-.text h1 {
-  font-size: 36px;
-  color: white;
-  margin-bottom: 60px;
+.text h1{
+  font-size: 1.75rem;
+}
+.text p{
+  font-size: 1rem;
+  line-height: 1.55rem;
 }
 
-.text p {
-  font-size: 18px;
-  color: white;
-  line-height: 1.6;
+@media screen and (min-width: 640px) {
+  .about{
+    height: calc(100dvh - 72px);
+    width: 100%;
+  }
+  .container{
+    width: 60%;
+  }
+  .text h1{
+    font-size: 2rem;
+  }
+  .text p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
 }
