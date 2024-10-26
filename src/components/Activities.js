@@ -5,242 +5,260 @@ import img1 from "../assets/file.jpg";
 
 const Activities = () => {
   return (
-    <div className="activities">
-      <div className="newFex">
-        <div className="card">
-          <div className="content">
-            <div className="back">
-              <div className="back-content">
-                <img
-                  className="back_img"
-                  src={img1}
-                  alt=""
-                  loading="lazy"
-                ></img>
-                <strong>Hover Me</strong>
+    <>
+      <div className="activities">
+        <h1>Activities</h1>
+        <div className="newFex">
+          <div className="card">
+            <div className="content">
+              <div className="back">
+                <div className="back-content">
+                  <img
+                    className="back_img"
+                    src={img1}
+                    alt=""
+                    loading="lazy"
+                  ></img>
+                  <strong>Hover Me</strong>
+                </div>
+              </div>
+              <div className="front">
+                <div className="img">
+                  <img
+                    className="front_img"
+                    src={img1}
+                    alt=""
+                    loading="lazy"
+                  ></img>
+                </div>
+
+                <div className="front-content">
+                  <small className="badge">Design</small>
+                  <div className="description">
+                    <div className="title">
+                      <p className="title">
+                        <strong>Artist</strong>
+                      </p>
+                      <svg
+                        fillRule="nonzero"
+                        height="15px"
+                        width="15px"
+                        viewBox="0,0,256,256"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          style={{ mixBlendMode: "normal" }}
+                          textAnchor="none"
+                          fontSize="none"
+                          fontWeight="none"
+                          fontFamily="none"
+                          strokeDashoffset="0"
+                          strokeDasharray=""
+                          strokeMiterlimit="10"
+                          strokeLinejoin="miter"
+                          strokeLinecap="butt"
+                          strokeWidth="1"
+                          stroke="none"
+                          fillRule="nonzero"
+                          fill="#20c997"
+                        >
+                          <g transform="scale(8,8)">
+                            <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <p className="card-footer">art &nbsp; | &nbsp; 1 piece</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="front">
-              <div className="img">
+          </div>
+          <div className="card">
+            <div className="content">
+              <div className="back">
+                <div className="back-content">
+                  <img
+                    className="back_img"
+                    src={img1}
+                    alt=""
+                    loading="lazy"
+                  ></img>
+                  <strong>Hover Me</strong>
+                </div>
+              </div>
+              <div className="front">
                 <img
                   className="front_img"
                   src={img1}
                   alt=""
                   loading="lazy"
                 ></img>
-              </div>
 
-              <div className="front-content">
-                <small className="badge">Design</small>
-                <div className="description">
-                  <div className="title">
-                    <p className="title">
-                      <strong>Artist</strong>
-                    </p>
-                    <svg
-                      fill-rule="nonzero"
-                      height="15px"
-                      width="15px"
-                      viewBox="0,0,256,256"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g
-                        style={{ mixBlendMode: "normal" }}
-                        text-anchor="none"
-                        font-size="none"
-                        font-weight="none"
-                        font-family="none"
-                        stroke-dashoffset="0"
-                        stroke-dasharray=""
-                        stroke-miterlimit="10"
-                        stroke-linejoin="miter"
-                        stroke-linecap="butt"
-                        stroke-width="1"
-                        stroke="none"
-                        fill-rule="nonzero"
-                        fill="#20c997"
+                <div className="front-content">
+                  <small className="badge">Design</small>
+                  <div className="description">
+                    <div className="title">
+                      <p className="title">
+                        <strong>Artist</strong>
+                      </p>
+                      <svg
+                        fillRule="nonzero"
+                        height="15px"
+                        width="15px"
+                        viewBox="0,0,256,256"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <g transform="scale(8,8)">
-                          <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                        <g
+                          style={{ mixBlendMode: "normal" }}
+                          textAnchor="none"
+                          fontSize="none"
+                          fontWeight="none"
+                          fontFamily="none"
+                          strokeDashoffset="0"
+                          strokeDasharray=""
+                          strokeMiterlimit="10"
+                          strokeLinejoin="miter"
+                          strokeLinecap="butt"
+                          strokeWidth="1"
+                          stroke="none"
+                          fillRule="nonzero"
+                          fill="#20c997"
+                        >
+                          <g transform="scale(8,8)">
+                            <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                          </g>
                         </g>
-                      </g>
-                    </svg>
+                      </svg>
+                    </div>
+                    <p className="card-footer">art &nbsp; | &nbsp; 1 piece</p>
                   </div>
-                  <p className="card-footer">art &nbsp; | &nbsp; 1 piece</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="card">
-          <div className="content">
-            <div className="back">
-              <div className="back-content">
+          <div className="card">
+            <div className="content">
+              <div className="back">
+                <div className="back-content">
+                  <img
+                    className="back_img"
+                    src={img1}
+                    alt=""
+                    loading="lazy"
+                  ></img>
+                  <strong>Hover Me</strong>
+                </div>
+              </div>
+              <div className="front">
                 <img
-                  className="back_img"
+                  className="front_img"
                   src={img1}
                   alt=""
                   loading="lazy"
                 ></img>
-                <strong>Hover Me</strong>
-              </div>
-            </div>
-            <div className="front">
-              <img className="front_img" src={img1} alt="" loading="lazy"></img>
 
-              <div className="front-content">
-                <small className="badge">Design</small>
-                <div className="description">
-                  <div className="title">
-                    <p className="title">
-                      <strong>Artist</strong>
-                    </p>
-                    <svg
-                      fill-rule="nonzero"
-                      height="15px"
-                      width="15px"
-                      viewBox="0,0,256,256"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g
-                        style={{ mixBlendMode: "normal" }}
-                        text-anchor="none"
-                        font-size="none"
-                        font-weight="none"
-                        font-family="none"
-                        stroke-dashoffset="0"
-                        stroke-dasharray=""
-                        stroke-miterlimit="10"
-                        stroke-linejoin="miter"
-                        stroke-linecap="butt"
-                        stroke-width="1"
-                        stroke="none"
-                        fill-rule="nonzero"
-                        fill="#20c997"
+                <div className="front-content">
+                  <small className="badge">Design</small>
+                  <div className="description">
+                    <div className="title">
+                      <p className="title">
+                        <strong>Artist</strong>
+                      </p>
+                      <svg
+                        fillRule="nonzero"
+                        height="15px"
+                        width="15px"
+                        viewBox="0,0,256,256"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <g transform="scale(8,8)">
-                          <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                        <g
+                          style={{ mixBlendMode: "normal" }}
+                          textAnchor="none"
+                          fontSize="none"
+                          fontWeight="none"
+                          fontFamily="none"
+                          strokeDashoffset="0"
+                          strokeDasharray=""
+                          strokeMiterlimit="10"
+                          strokeLinejoin="miter"
+                          strokeLinecap="butt"
+                          strokeWidth="1"
+                          stroke="none"
+                          fillRule="nonzero"
+                          fill="#20c997"
+                        >
+                          <g transform="scale(8,8)">
+                            <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                          </g>
                         </g>
-                      </g>
-                    </svg>
+                      </svg>
+                    </div>
+                    <p className="card-footer">art &nbsp; | &nbsp; 1 piece</p>
                   </div>
-                  <p className="card-footer">art &nbsp; | &nbsp; 1 piece</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="card">
-          <div className="content">
-            <div className="back">
-              <div className="back-content">
-                <img
-                  className="back_img"
-                  src={img1}
-                  alt=""
-                  loading="lazy"
-                ></img>
-                <strong>Hover Me</strong>
-              </div>
-            </div>
-            <div className="front">
-              <img className="front_img" src={img1} alt="" loading="lazy"></img>
-
-              <div className="front-content">
-                <small className="badge">Design</small>
-                <div className="description">
-                  <div className="title">
-                    <p className="title">
-                      <strong>Artist</strong>
-                    </p>
-                    <svg
-                      fill-rule="nonzero"
-                      height="15px"
-                      width="15px"
-                      viewBox="0,0,256,256"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g
-                        style={{ mixBlendMode: "normal" }}
-                        text-anchor="none"
-                        font-size="none"
-                        font-weight="none"
-                        font-family="none"
-                        stroke-dashoffset="0"
-                        stroke-dasharray=""
-                        stroke-miterlimit="10"
-                        stroke-linejoin="miter"
-                        stroke-linecap="butt"
-                        stroke-width="1"
-                        stroke="none"
-                        fill-rule="nonzero"
-                        fill="#20c997"
-                      >
-                        <g transform="scale(8,8)">
-                          <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
-                        </g>
-                      </g>
-                    </svg>
-                  </div>
-                  <p className="card-footer">art &nbsp; | &nbsp; 1 piece</p>
+          <div className="card">
+            <div className="content">
+              <div className="back">
+                <div className="back-content">
+                  <img
+                    className="back_img"
+                    src={img1}
+                    alt=""
+                    loading="lazy"
+                  ></img>
+                  <strong>Hover Me</strong>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="content">
-            <div className="back">
-              <div className="back-content">
+              <div className="front">
                 <img
-                  className="back_img"
+                  className="front_img"
                   src={img1}
                   alt=""
                   loading="lazy"
                 ></img>
-                <strong>Hover Me</strong>
-              </div>
-            </div>
-            <div className="front">
-              <img className="front_img" src={img1} alt="" loading="lazy"></img>
 
-              <div className="front-content">
-                <small className="badge">Design</small>
-                <div className="description">
-                  <div className="title">
-                    <p className="title">
-                      <strong>Artist</strong>
-                    </p>
-                    <svg
-                      fill-rule="nonzero"
-                      height="15px"
-                      width="15px"
-                      viewBox="0,0,256,256"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g
-                        style={{ mixBlendMode: "normal" }}
-                        text-anchor="none"
-                        font-size="none"
-                        font-weight="none"
-                        font-family="none"
-                        stroke-dashoffset="0"
-                        stroke-dasharray=""
-                        stroke-miterlimit="10"
-                        stroke-linejoin="miter"
-                        stroke-linecap="butt"
-                        stroke-width="1"
-                        stroke="none"
-                        fill-rule="nonzero"
-                        fill="#20c997"
+                <div className="front-content">
+                  <small className="badge">Design</small>
+                  <div className="description">
+                    <div className="title">
+                      <p className="title">
+                        <strong>Artist</strong>
+                      </p>
+                      <svg
+                        fillRule="nonzero"
+                        height="15px"
+                        width="15px"
+                        viewBox="0,0,256,256"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <g transform="scale(8,8)">
-                          <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                        <g
+                          style={{ mixBlendMode: "normal" }}
+                          textAnchor="none"
+                          fontSize="none"
+                          fontWeight="none"
+                          fontFamily="none"
+                          strokeDashoffset="0"
+                          strokeDasharray=""
+                          strokeMiterlimit="10"
+                          strokeLinejoin="miter"
+                          strokeLinecap="butt"
+                          strokeWidth="1"
+                          stroke="none"
+                          fillRule="nonzero"
+                          fill="#20c997"
+                        >
+                          <g transform="scale(8,8)">
+                            <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                          </g>
                         </g>
-                      </g>
-                    </svg>
+                      </svg>
+                    </div>
+                    <p className="card-footer">art &nbsp; | &nbsp; 1 piece</p>
                   </div>
-                  <p className="card-footer">art &nbsp; | &nbsp; 1 piece</p>
                 </div>
               </div>
             </div>
@@ -248,6 +266,28 @@ const Activities = () => {
         </div>
       </div>
       <div className="client">
+        <figure className="client-gradient">
+          <svg
+            viewBox="0 0 100% 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width='100%'  height="100" fill="url(#paint0_linear_516_76)" />
+            <defs>
+              <linearGradient
+                id="paint0_linear_516_76"
+                x1="400"
+                y1="0"
+                x2="400"
+                y2="100"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#eef8ff" />
+                <stop offset="1" stopColor="#E6C97D" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </figure>
         <h1>What My Clients Say</h1>
         <samp className="bar"></samp>
         <div className="card-container">
@@ -332,7 +372,7 @@ const Activities = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

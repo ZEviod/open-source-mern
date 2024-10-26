@@ -1,10 +1,23 @@
+.activities{
+  padding-top: 48px;
+  background-color: #e6c97d rgba(255, 255, 255, 1);
+  padding-inline: 24px;
+}
+.activities h1{
+  text-align: center;
+  font-family: "Poppins", serif;
+  font-style: normal;
+  font-weight: 600;
+  color: #ff9966;
+  text-transform: capitalize;
+  font-size: 2.2rem;
+}
 .newFex {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   gap: 100px;
-  background-color: #e6c97d;
   padding-top: 50px;
 }
 
@@ -184,6 +197,24 @@
   justify-content: space-around;
 }
 
+.client {
+  text-align: center;
+  margin-top: 148px;
+  padding-top: 50px;
+  background-color: #e6c97d;
+  position: relative;
+  width: 100%;
+}
+.client-gradient{
+  position: absolute;
+  top: -100px;
+  width: 100%;
+  height: 100px;
+}
+.client-gradient svg{
+  height: 100px;
+  width: 100%;
+}
 .client_card {
   background-color: rgb(255, 255, 255);
   color: #000;
@@ -203,12 +234,7 @@
   border-radius: 8px;
 }
 
-.client {
-  text-align: center;
-  margin: 0px;
-  padding-top: 50px;
-  background-color: #e6c97d;
-}
+
 
 .client h1 {
   font-size: 44px;
