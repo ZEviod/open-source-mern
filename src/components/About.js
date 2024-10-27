@@ -11,15 +11,11 @@ const About = () => {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque quae
             reiciendis eius et libero harum aliquid voluptatibus cum nihil
             tenetur molestias numquam perspiciatis, pariatur placeat corrupti
-            beatae consequatur ducimus odit laborum laudantium, quis quia? Ex
-            qui fuga ipsum aperiam magni quae accusantium nesciunt, nisi,
-            obcaecati quo quod sequi nostrum, incidunt quos recusandae. Ducimus,
-            cum obcaecati quod blanditiis magni aperiam sunt necessitatibus
-            maxime libero rerum aut quia mollitia neque minima.
+            beatae consequatur ducimus odit laborum laudantium, quis quia.
           </p>
-
-          <button className="button-50">Know More</button>
         </div>
+
+          <button className="nav_links1">Know More</button>
       </div>
     </div>
   );
