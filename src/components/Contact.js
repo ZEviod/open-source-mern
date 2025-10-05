@@ -1,9 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 
 const Contact = () => {
-  const FormSubmission = (formData) => {
-    console.log(formData);
+  const [status, setStatus] = useState({ state: "idle", message: "" });
+  const [isSending, setIsSending] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const fullName = e.currentTarget.fullName.value.trim();
+    const email = e.currentTarget.email.value.trim();
+    const message = e.currentTarget.message.value.trim();
+
+    // Basic client-side validation
+    if (!fullName || fullName.length < 2) {
+      setStatus({ state: "error", message: "Please enter your full name." });
+      return;
+    }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setStatus({
+        state: "error",
+        message: "Please enter a valid email address.",
+      });
+      return;
+    }
+    if (!message || message.length < 5) {
+      setStatus({
+        state: "error",
+        message: "Message must be at least 5 characters.",
+      });
+      return;
+    }
+
+    setIsSending(true);
+    setStatus({ state: "sending", message: "Sending..." });
+
+    try {
+      const resp = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fullName, email, message }),
+      });
+
+      if (!resp.ok) {
+        const data = await resp.json().catch(() => ({}));
+        const errMsg =
+          data && data.errors
+            ? data.errors.map((e) => e.msg).join(", ")
+            : data.error || "Failed to send message";
+        setStatus({ state: "error", message: errMsg });
+        setIsSending(false);
+        return;
+      }
+
+      setStatus({
+        state: "success",
+        message: "Thanks — your message has been sent.",
+      });
+      e.currentTarget.reset();
+    } catch (err) {
+      setStatus({
+        state: "error",
+        message: "Network error — please try again later.",
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -44,15 +105,7 @@ const Contact = () => {
         </div>
         <div className="contact-form">
           <form
-            onSubmit={(form) => {
-              form.preventDefault();
-              const formData = {
-                fullName: form.currentTarget.fullName.value,
-                email: form.currentTarget.email.value,
-                message: form.currentTarget.message.value,
-              };
-              FormSubmission(formData);
-            }}
+            onSubmit={handleSubmit}
             className="form"
             aria-describedby="form-status"
           >
@@ -100,16 +153,24 @@ const Contact = () => {
                   rows={7}
                 ></textarea>
               </div>
-              <button type="submit" className="submit-button">
-                Submit
-              </button>
-              <div
-                id="form-status"
-                role="status"
-                aria-live="polite"
-                className="sr-only"
+              <button
+                type="submit"
+                className="submit-button"
+                disabled={isSending}
               >
-                Form not submitted
+                {isSending ? "Sending..." : "Submit"}
+              </button>
+
+              <div id="form-status" role="status" aria-live="polite">
+                {status.state === "error" && (
+                  <p className="form-error">{status.message}</p>
+                )}
+                {status.state === "success" && (
+                  <p className="form-success">{status.message}</p>
+                )}
+                {status.state === "sending" && (
+                  <p className="form-sending">{status.message}</p>
+                )}
               </div>
             </div>
           </form>

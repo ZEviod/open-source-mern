@@ -8,6 +8,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### Server (contact API)
+
+This project includes a small Express server under the `server/` folder that provides a POST `/api/contact` endpoint for the contact form.
+
+To run the server (requires Node.js):
+
+```powershell
+cd server
+npm install
+npm run start
+```
+
+The client (React app) is configured with a `proxy` in `package.json` so requests to `/api/contact` from the development server will be forwarded to `http://localhost:5000` where the Express server listens.
+
+Messages submitted to `/api/contact` are validated server-side and appended to `server/messages.log` to simulate persistence or sending an email.
+
 ### `npm start`
 
 Runs the app in the development mode.\

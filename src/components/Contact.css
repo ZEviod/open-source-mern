@@ -115,3 +115,21 @@
 .submit-button:hover {
   background-color: #2563eb; /* Darker blue on hover */
 }
+
+.form-error {
+  color: #b91c1c; /* red */
+  background: #fee2e2;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.form-success {
+  color: #065f46; /* green */
+  background: #ecfccb;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.form-sending {
+  color: #1e293b;
+}
