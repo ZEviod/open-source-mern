@@ -54,6 +54,7 @@ const Contact = () => {
               FormSubmission(formData);
             }}
             className="form"
+            aria-describedby="form-status"
           >
             <div className="form-header">
               <h3 className="form-title">Get in Touch</h3>
@@ -61,7 +62,11 @@ const Contact = () => {
             </div>
             <div className="form-fields">
               <div className="input-container">
+                <label htmlFor="fullName" className="sr-only">
+                  Full name
+                </label>
                 <input
+                  id="fullName"
                   type="text"
                   name="fullName"
                   required
@@ -70,7 +75,11 @@ const Contact = () => {
                 />
               </div>
               <div className="input-container">
+                <label htmlFor="email" className="sr-only">
+                  Email address
+                </label>
                 <input
+                  id="email"
                   type="email"
                   name="email"
                   required
@@ -79,7 +88,11 @@ const Contact = () => {
                 />
               </div>
               <div className="input-container">
+                <label htmlFor="message" className="sr-only">
+                  Message
+                </label>
                 <textarea
+                  id="message"
                   name="message"
                   required
                   placeholder="How can we help?"
@@ -87,7 +100,17 @@ const Contact = () => {
                   rows={7}
                 ></textarea>
               </div>
-              <button className="submit-button">Submit</button>
+              <button type="submit" className="submit-button">
+                Submit
+              </button>
+              <div
+                id="form-status"
+                role="status"
+                aria-live="polite"
+                className="sr-only"
+              >
+                Form not submitted
+              </div>
             </div>
           </form>
         </div>

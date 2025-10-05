@@ -15,7 +15,9 @@ const About = () => {
           </p>
         </div>
 
-          <button className="nav_links1">Know More</button>
+        <button className="nav_links1" aria-label="Learn more about us">
+          Know More
+        </button>
       </div>
     </div>
   );
