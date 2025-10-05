@@ -19,13 +19,28 @@ const Footer = () => {
             error!
           </p>
           <div className="social-icons">
-            <a href="https://facebook.com" aria-label="Facebook">
+            <a
+              href="https://facebook.com"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebook size={20} />
             </a>
-            <a href="https://instagram.com" aria-label="Instagram">
+            <a
+              href="https://instagram.com"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram size={20} />
             </a>
-            <a href="https://twitter.com" aria-label="Twitter">
+            <a
+              href="https://twitter.com"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaTwitter size={20} />
             </a>
           </div>

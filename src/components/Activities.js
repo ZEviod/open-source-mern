@@ -8,29 +8,33 @@ const Activities = () => {
     <>
       <div className="activities">
         <h1>Activities</h1>
-        <samp className="bar"></samp>
+        <span className="bar" aria-hidden="true"></span>
         <div className="newFex">
-          <div className="card">
+          <div className="card" role="article" tabIndex={0}>
             <div className="content">
               <div className="back">
                 <div className="back-content">
                   <img
                     className="back_img"
                     src={img1}
-                    alt=""
+                    alt="Ceramic artwork back view"
                     loading="lazy"
-                  ></img>
+                  />
                   <strong>Hover Me</strong>
                 </div>
               </div>
-              <div className="front">
+              <div
+                className="front"
+                role="group"
+                aria-label="Artwork card front"
+              >
                 <div className="img">
                   <img
                     className="front_img"
                     src={img1}
-                    alt=""
+                    alt="Ceramic artwork front view"
                     loading="lazy"
-                  ></img>
+                  />
                 </div>
 
                 <div className="front-content">
@@ -75,16 +79,16 @@ const Activities = () => {
               </div>
             </div>
           </div>
-          <div className="card">
+          <div className="card" role="article" tabIndex={0}>
             <div className="content">
               <div className="back">
                 <div className="back-content">
                   <img
                     className="back_img"
                     src={img1}
-                    alt=""
+                    alt="Ceramic artwork back view"
                     loading="lazy"
-                  ></img>
+                  />
                   <strong>Hover Me</strong>
                 </div>
               </div>
@@ -92,9 +96,9 @@ const Activities = () => {
                 <img
                   className="front_img"
                   src={img1}
-                  alt=""
+                  alt="Ceramic artwork front view"
                   loading="lazy"
-                ></img>
+                />
 
                 <div className="front-content">
                   <small className="badge">Design</small>
@@ -138,16 +142,16 @@ const Activities = () => {
               </div>
             </div>
           </div>
-          <div className="card">
+          <div className="card" role="article" tabIndex={0}>
             <div className="content">
               <div className="back">
                 <div className="back-content">
                   <img
                     className="back_img"
                     src={img1}
-                    alt=""
+                    alt="Ceramic artwork back view"
                     loading="lazy"
-                  ></img>
+                  />
                   <strong>Hover Me</strong>
                 </div>
               </div>
@@ -155,9 +159,9 @@ const Activities = () => {
                 <img
                   className="front_img"
                   src={img1}
-                  alt=""
+                  alt="Ceramic artwork front view"
                   loading="lazy"
-                ></img>
+                />
 
                 <div className="front-content">
                   <small className="badge">Design</small>
@@ -201,16 +205,16 @@ const Activities = () => {
               </div>
             </div>
           </div>
-          <div className="card">
+          <div className="card" role="article" tabIndex={0}>
             <div className="content">
               <div className="back">
                 <div className="back-content">
                   <img
                     className="back_img"
                     src={img1}
-                    alt=""
+                    alt="Ceramic artwork back view"
                     loading="lazy"
-                  ></img>
+                  />
                   <strong>Hover Me</strong>
                 </div>
               </div>
@@ -218,9 +222,9 @@ const Activities = () => {
                 <img
                   className="front_img"
                   src={img1}
-                  alt=""
+                  alt="Ceramic artwork front view"
                   loading="lazy"
-                ></img>
+                />
 
                 <div className="front-content">
                   <small className="badge">Design</small>
@@ -290,7 +294,7 @@ const Activities = () => {
           </svg>
         </figure>
         <h1>What My Clients Say</h1>
-        <samp className="bar"></samp>
+        <span className="bar" aria-hidden="true"></span>
         <div className="card-container">
           <div className="client_card">
             <div className="quote">
@@ -309,14 +313,14 @@ const Activities = () => {
               through pottery techniques with ease. Loved the therapeutic aspect
               and left feeling accomplished!
             </p>
-              <samp className="bar_cc"></samp>
+            <samp className="bar_cc"></samp>
             <div className="client_content">
               <img
                 className="client_img client_img1"
                 src={img1}
-                alt=""
+                alt="Portrait of client Mihir Bohra"
                 loading="lazy"
-              ></img>
+              />
               <p>Mihir Bohra</p>
             </div>
           </div>
@@ -343,9 +347,9 @@ const Activities = () => {
               <img
                 className="client_img client_img2"
                 src={img1}
-                alt=""
+                alt="Portrait of client Ashish Gandhi"
                 loading="lazy"
-              ></img>
+              />
               <p>Ashish Gandhi</p>
             </div>
           </div>
@@ -371,9 +375,9 @@ const Activities = () => {
               <img
                 className="client_img client_img3"
                 src={img1}
-                alt=""
+                alt="Portrait of client Abhineet Dubey"
                 loading="lazy"
-              ></img>
+              />
               <p>Abhineet Dubey</p>
             </div>
           </div>
