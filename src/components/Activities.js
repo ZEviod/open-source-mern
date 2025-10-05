@@ -337,7 +337,7 @@ const Activities = () => {
               />
             </div>
 
-            <p className="para_gap1">
+            <p className="para_gap2">
               Exceptional className! The instructor’s expertise was matched only
               by their encouragement. A perfect blend of learning and
               relaxation.
