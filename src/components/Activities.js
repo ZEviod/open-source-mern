@@ -294,7 +294,7 @@ const Activities = () => {
           </svg>
         </figure>
         <h1>What My Clients Say</h1>
-        <span aria-hidden="true"></span>
+        <span className="bar" aria-hidden="true"></span>
         <div className="card-container">
           <div className="client_card">
             <div className="quote">
