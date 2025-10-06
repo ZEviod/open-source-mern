@@ -17,7 +17,7 @@ const Activities = () => {
                   <img
                     className="back_img"
                     src={img1}
-                    alt="Ceramic artwork back view"
+                    alt="Back view of ceramic artwork"
                     loading="lazy"
                   />
                   <strong>Hover Me</strong>
@@ -32,7 +32,7 @@ const Activities = () => {
                   <img
                     className="front_img"
                     src={img1}
-                    alt="Ceramic artwork front view"
+                    alt="Front view of ceramic artwork"
                     loading="lazy"
                   />
                 </div>
@@ -86,7 +86,7 @@ const Activities = () => {
                   <img
                     className="back_img"
                     src={img1}
-                    alt="Ceramic artwork back view"
+                    alt="Back view of ceramic artwork"
                     loading="lazy"
                   />
                   <strong>Hover Me</strong>
@@ -96,7 +96,7 @@ const Activities = () => {
                 <img
                   className="front_img"
                   src={img1}
-                  alt="Ceramic artwork front view"
+                  alt="Front view of ceramic artwork"
                   loading="lazy"
                 />
 
@@ -149,7 +149,7 @@ const Activities = () => {
                   <img
                     className="back_img"
                     src={img1}
-                    alt="Ceramic artwork back view"
+                    alt="Back view of ceramic artwork"
                     loading="lazy"
                   />
                   <strong>Hover Me</strong>
@@ -159,7 +159,7 @@ const Activities = () => {
                 <img
                   className="front_img"
                   src={img1}
-                  alt="Ceramic artwork front view"
+                  alt="Front view of ceramic artwork"
                   loading="lazy"
                 />
 
@@ -212,7 +212,7 @@ const Activities = () => {
                   <img
                     className="back_img"
                     src={img1}
-                    alt="Ceramic artwork back view"
+                    alt="Back view of ceramic artwork"
                     loading="lazy"
                   />
                   <strong>Hover Me</strong>
@@ -222,7 +222,7 @@ const Activities = () => {
                 <img
                   className="front_img"
                   src={img1}
-                  alt="Ceramic artwork front view"
+                  alt="Front view of ceramic artwork"
                   loading="lazy"
                 />
 

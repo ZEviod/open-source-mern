@@ -18,7 +18,7 @@ const Footer = () => {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam,
             error!
           </p>
-          <div className="social-icons">
+          <nav aria-label="Social media links" className="social-icons">
             <a
               href="https://facebook.com"
               aria-label="Facebook"
@@ -43,16 +43,15 @@ const Footer = () => {
             >
               <FaTwitter size={20} />
             </a>
-          </div>
+          </nav>
         </div>
 
         {/* Column 2: Contact Details */}
         <div className="footer-col contact-col">
-          <h3>Contact Us</h3>
+          <h2>Contact Us</h2>
           <p>123 Main Street, City, Country</p>
           <p>
-            Email:{" "}
-            <a href="mailto:helloWorld@gmail.com">helloWorld@gmail.com</a>
+            Email: <a href="mailto:helloWorld@gmail.com">helloWorld@gmail.com</a>
           </p>
           <p>
             Phone: <a href="tel:+919966996699">+91-9966996699</a>
@@ -60,7 +59,7 @@ const Footer = () => {
         </div>
 
         {/* Column 3: Quick Links */}
-        <div className="footer-col links-col">
+        <nav className="footer-col links-col" aria-label="Footer quick links">
           <h3>Quick Links</h3>
           <ul className="footer-links">
             <li>
@@ -79,10 +78,11 @@ const Footer = () => {
               <Link to="/contact">Contact Us</Link>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
+
       {/* Column 4: Location Map */}
-      <div className=" map-col">
+      <div className="map-col">
         <h3>Our Location</h3>
         <iframe
           className="location-map"
