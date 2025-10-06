@@ -40,67 +40,128 @@
 
 body {
   background-color: #fffdd0;
+  margin: 0;
+  font-family: "Poppins", serif;
 }
-.about{
+
+/* About Section */
+.about {
   height: calc(100dvh - 72px);
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.3)
+    ),
     url(../../public/images/heroBg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    background-position: bottom ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Container */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 95%;
+  width: 90%;
+  max-width: 800px;
   margin-inline: auto;
   height: 100%;
   gap: 2rem;
+  padding: 1rem;
 }
 
-
-/* .ff-poppins{
-  font-family: "Poppins", serif;
-  font-style: normal;
-} */
-.text{
+/* Text Block */
+.text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.text h1, .text p
-{
-  font-family: "Poppins", serif;
-  font-style: normal;
-  color: #eee;
-  text-align: center;
-}
-.text h1{
-  font-size: 1.75rem;
-}
-.text p{
-  font-size: 1rem;
-  line-height: 1.55rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+
 }
 
+
+.text h1,
+.text p {
+  font-family: "Poppins", serif;
+  color: #fff;
+  text-align: center;
+}
+
+.text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.text p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  opacity: 0.95;
+}
+
+/* Button Styling */
+.nav_links1 {
+  list-style: none;
+  background-color: rgb(223, 163, 84);
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  font-size: 1.05rem;
+  font-family: "Poppins", serif;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.nav_links1:hover {
+  background-color: rgb(223, 172, 106);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+/* Optional additional button style */
+.button-50 {
+  background-color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.4s ease;
+}
+
+.button-50:hover {
+  background-color: #aaaaaa;
+  color: #000;
+  border-radius: 8px;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styling */
 @media screen and (min-width: 640px) {
-  .about{
-    height: calc(100dvh - 72px);
-    width: 100%;
-  }
-  .container{
+  .container {
     width: 60%;
   }
-  .text h1{
-    font-size: 2rem;
+  .text h1 {
+    font-size: 2.5rem;
   }
-  .text p{
+  .text p {
     font-size: 1.2rem;
     line-height: 2rem;
   }
