@@ -230,28 +230,27 @@
   background-color: rgb(255, 255, 255);
   color: #000;
   text-align: center;
-  /* padding: 64px 32px;
-  padding-bottom: 24px; */
   padding-inline: 24px;
   padding-top: 48px;
   padding-bottom: 16px;
   margin-top: 4%;
   border-radius: 8px;
   box-shadow: 10px 10px 32px #dedede;
-  /* max-width: 27vw; */
   width: 380px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.client_card > p, .client_content > p{
-  font-family: "Poppins", serif ;
+.client_card > p,
+.client_content > p {
+  font-family: "Poppins", serif;
   font-size: 14px;
   opacity: 0.9;
 }
+
 .client_card:hover {
   cursor: pointer;
   transform: translateY(-20px);
-  transition: var(--transition);
-  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 
