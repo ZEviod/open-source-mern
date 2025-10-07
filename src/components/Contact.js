@@ -11,7 +11,6 @@ const Contact = () => {
     const email = e.currentTarget.email.value.trim();
     const message = e.currentTarget.message.value.trim();
 
-    // Basic client-side validation
     if (!fullName || fullName.length < 2) {
       setStatus({ state: "error", message: "Please enter your full name." });
       return;
@@ -68,41 +67,54 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container">
+    <main className="contact-container" aria-labelledby="contact-heading">
       <div className="contact-content">
         <div className="contact-info">
-          <h3 className="contact-title">Contact Us</h3>
+          <h2 id="contact-heading" className="contact-title">
+            Contact Us
+          </h2>
           <p className="contact-description">
             Email, call, or complete the form to learn how Personal Finance
             Tracker can solve your messaging problem.
           </p>
-          <h3 className="contact-email">hello@OpenSourceMern.in</h3>
-          <h3 className="contact-phone">123-345-567</h3>
-          <h3 className="support-link">Customer Support</h3>
-          <div className="support-sections">
+          <p className="contact-email" aria-label="Email address">
+            hello@OpenSourceMern.in
+          </p>
+          <p className="contact-phone" aria-label="Phone number">
+            123-345-567
+          </p>
+
+          <section
+            className="support-sections"
+            aria-labelledby="support-title"
+          >
+            <h3 id="support-title" className="support-link">
+              Customer Support
+            </h3>
             <div className="support-item">
-              <h3 className="support-title">Customer Support</h3>
+              <h4 className="support-title">Customer Support</h4>
               <p className="support-text">
                 Our support team is available around the clock to address any
                 concerns or queries you may have.
               </p>
             </div>
             <div className="support-item">
-              <h3 className="support-title">Feedback and Suggestions</h3>
+              <h4 className="support-title">Feedback and Suggestions</h4>
               <p className="support-text">
                 We value your feedback and are continuously working to improve
                 OSM. Your input is crucial in shaping the future of Us.
               </p>
             </div>
             <div className="support-item">
-              <h3 className="support-title">Finance Inquiries</h3>
+              <h4 className="support-title">Finance Inquiries</h4>
               <p className="support-text">
                 For Finance-related questions or any help, please contact us at
                 Finance@OpenSourceMern.in
               </p>
             </div>
-          </div>
+          </section>
         </div>
+
         <div className="contact-form">
           <form
             onSubmit={handleSubmit}
@@ -113,11 +125,10 @@ const Contact = () => {
               <h3 className="form-title">Get in Touch</h3>
               <p className="form-subtitle">You can reach us anytime</p>
             </div>
+
             <div className="form-fields">
               <div className="input-container">
-                <label htmlFor="fullName" className="sr-only">
-                  Full name
-                </label>
+                <label htmlFor="fullName">Full name</label>
                 <input
                   id="fullName"
                   type="text"
@@ -127,10 +138,9 @@ const Contact = () => {
                   className="input"
                 />
               </div>
+
               <div className="input-container">
-                <label htmlFor="email" className="sr-only">
-                  Email address
-                </label>
+                <label htmlFor="email">Email address</label>
                 <input
                   id="email"
                   type="email"
@@ -140,10 +150,9 @@ const Contact = () => {
                   className="input"
                 />
               </div>
+
               <div className="input-container">
-                <label htmlFor="message" className="sr-only">
-                  Message
-                </label>
+                <label htmlFor="message">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -153,17 +162,21 @@ const Contact = () => {
                   rows={7}
                 ></textarea>
               </div>
+
               <button
                 type="submit"
                 className="submit-button"
                 disabled={isSending}
+                aria-label="Submit contact form"
               >
                 {isSending ? "Sending..." : "Submit"}
               </button>
 
               <div id="form-status" role="status" aria-live="polite">
                 {status.state === "error" && (
-                  <p className="form-error">{status.message}</p>
+                  <p className="form-error" role="alert">
+                    {status.message}
+                  </p>
                 )}
                 {status.state === "success" && (
                   <p className="form-success">{status.message}</p>
@@ -176,7 +189,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

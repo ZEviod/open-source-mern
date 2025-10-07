@@ -7,14 +7,19 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+
   return (
     <div className="header-container">
       {/* Skip link for keyboard users */}
-      <a href="#main-content" className="sr-only">
+      <a href="#main-content" className="sr-only" tabIndex={0}>
         Skip to content
       </a>
+
       <header>
-        {/* <img className="logo" alt="introImg" /> */}
+        {/* Logo placeholder */}
+        {/* <img className="logo" alt="Company Logo" /> */}
+
+        {/* Hamburger button */}
         <button
           className="hamburger"
           onClick={handleClick}
@@ -22,56 +27,59 @@ const Navbar = () => {
           aria-expanded={click}
           aria-controls="primary-navigation"
         >
-          {click ? (
-            <FaTimes size={20} style={{ color: "#000" }} />
-          ) : (
-            <FaBars size={20} style={{ color: "#000" }} />
-          )}
+          {click ? <FaTimes size={20} /> : <FaBars size={20} />}
         </button>
+
+        {/* Desktop navigation */}
         <nav className="nav_nav" aria-label="Primary navigation">
           <ul className="nav_links">
-            <li>
-              <Link to="/">Home </Link>
+            <li role="menuitem">
+              <Link to="/">Home</Link>
             </li>
-            <li>
-              <Link to="/about">About </Link>
+            <li role="menuitem">
+              <Link to="/about">About</Link>
             </li>
-            <li>
-              <Link to="/designs">Design </Link>
+            <li role="menuitem">
+              <Link to="/designs">Design</Link>
             </li>
-            <li>
-              <Link to="/activities">Activity </Link>
+            <li role="menuitem">
+              <Link to="/activities">Activity</Link>
             </li>
           </ul>
         </nav>
+
+        {/* Contact button */}
         <ul className="nav_links1">
           <li>
             <Link to="/contact" className="buttn">
-              Contact Us{" "}
+              Contact Us
             </Link>
           </li>
         </ul>
       </header>
-      <ul
+
+      {/* Mobile navigation */}
+      <nav
         id="primary-navigation"
         className={`nav_links_mobile ${
           !click ? "hide-mobile-nav" : "show-mobile-nav"
         }`}
+        role="menu"
         aria-hidden={!click}
       >
-        <li>
-          <Link to="/">Home </Link>
+        <li role="menuitem">
+          <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link to="/about">About </Link>
+        <li role="menuitem">
+          <Link to="/about">About</Link>
         </li>
-        <li>
-          <Link to="/designs">Design </Link>
+        <li role="menuitem">
+          <Link to="/designs">Design</Link>
         </li>
-        <li>
-          <Link to="/activities">Activity </Link>
+        <li role="menuitem">
+          <Link to="/activities">Activity</Link>
         </li>
-      </ul>
+      </nav>
     </div>
   );
 };
