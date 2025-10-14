@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-/* 1. Define colors, fonts, and other variables in one place for easy theming */
 :root {
   --bg-primary: bisque;
   --bg-hover: #e6c97d;
@@ -16,7 +15,6 @@
    --font-brand: "Playfair Display", serif;
 }
 
-/* 2. Better global styles without !important */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -27,7 +25,6 @@ body {
   font-family: var(--font-body);
 }
 
-/* 3. Main Navbar/Header styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -35,20 +32,19 @@ body {
   height: var(--nav-height);
   padding-inline: 24px;
   background-color: var(--bg-primary);
-  position: relative; /* For positioning the mobile menu */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a little depth */
+  position: relative; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .navbar__brand-name {
-  font-family: var(--font-brand); /* Use the new brand font variable */
-  font-size: 28px; /* Adjust size as desired */
-  font-weight: 700; /* Bolder for prominence */
-  color: var(--text-secondary); /* Or a specific brand color */
-  text-decoration: none; /* In case the parent Link adds underline */
-  line-height: 1; /* Keep text compact */
+  font-family: var(--font-brand); 
+  font-size: 28px; 
+  font-weight: 700; 
+  color: var(--text-secondary); 
+  text-decoration: none; 
+  line-height: 1; 
 }
 
-/* 4. Mobile Menu styles (the default state) */
 .navbar__menu {
   position: absolute;
   top: var(--nav-height);
@@ -70,7 +66,6 @@ body {
   z-index: 99;
 }
 
-/* This is the key: The 'is-active' class added by React shows the menu */
 .navbar__menu.is-active {
   transform: translateY(0);
   opacity: 1;
