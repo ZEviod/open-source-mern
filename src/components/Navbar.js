@@ -1,86 +1,54 @@
-import "./Navbar.css";
+import "./Navbar.css"; 
 import { useState } from "react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom"; 
 import { FaBars, FaTimes } from "react-icons/fa";
 
+const navLinks = [
+  { to: "/", text: "Home" },
+  { to: "/about", text: "About" },
+  { to: "/designs", text: "Design" },
+  { to: "/activities", text: "Activity" },
+];
+
 const Navbar = () => {
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMobileMenu = () => setIsMenuOpen(false);
 
   return (
-    <div className="header-container">
-      {/* Skip link for keyboard users */}
-      <a href="#main-content" className="sr-only" tabIndex={0}>
-        Skip to content
-      </a>
+    <header className="navbar">
+      <Link to="/" className="navbar__logo-link" onClick={closeMobileMenu}>
+        <h1 className="navbar__brand-name">Working Studios</h1>
+      </Link>
 
-      <header>
-        {/* Logo placeholder */}
-        {/* <img className="logo" alt="Company Logo" /> */}
+      <button className="navbar__hamburger" onClick={toggleMenu} aria-label="Navigation menu button">
+        {isMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+      </button>
 
-        {/* Hamburger button */}
-        <button
-          className="hamburger"
-          onClick={handleClick}
-          aria-label={click ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={click}
-          aria-controls="primary-navigation"
-        >
-          {click ? <FaTimes size={20} /> : <FaBars size={20} />}
-        </button>
-
-        {/* Desktop navigation */}
-        <nav className="nav_nav" aria-label="Primary navigation">
-          <ul className="nav_links">
-            <li role="menuitem">
-              <Link to="/">Home</Link>
+      <nav className={`navbar__menu ${isMenuOpen ? "is-active" : ""}`}>
+        <ul className="navbar__links">
+          {navLinks.map((link) => (
+            <li key={link.to}>
+              <NavLink
+                to={link.to}
+                className={({ isActive }) =>
+                  `navbar__link ${isActive ? "active" : ""}`
+                }
+                onClick={closeMobileMenu}
+              >
+                {link.text}
+              </NavLink>
             </li>
-            <li role="menuitem">
-              <Link to="/about">About</Link>
-            </li>
-            <li role="menuitem">
-              <Link to="/designs">Design</Link>
-            </li>
-            <li role="menuitem">
-              <Link to="/activities">Activity</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Contact button */}
-        <ul className="nav_links1">
-          <li>
-            <Link to="/contact" className="buttn">
-              Contact Us
-            </Link>
-          </li>
+          ))}
         </ul>
-      </header>
 
-      {/* Mobile navigation */}
-      <nav
-        id="primary-navigation"
-        className={`nav_links_mobile ${
-          !click ? "hide-mobile-nav" : "show-mobile-nav"
-        }`}
-        role="menu"
-        aria-hidden={!click}
-      >
-        <li role="menuitem">
-          <Link to="/">Home</Link>
-        </li>
-        <li role="menuitem">
-          <Link to="/about">About</Link>
-        </li>
-        <li role="menuitem">
-          <Link to="/designs">Design</Link>
-        </li>
-        <li role="menuitem">
-          <Link to="/activities">Activity</Link>
-        </li>
+        <Link to="/contact" className="navbar__cta" onClick={closeMobileMenu}>
+          Contact Us
+        </Link>
       </nav>
-    </div>
+    </header>
   );
 };
 
