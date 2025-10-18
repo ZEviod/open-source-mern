@@ -1,145 +1,157 @@
-/* Global Reset and Font Settings */
+/* --- CSS Variables for Easy Theming --- */
+:root {
+    --footer-gradient: linear-gradient(to right, rgb(150, 106, 23), #fbcf6f);
+    --footer-bg-hover: rgb(150, 106, 23);
+    --footer-text-color: #fff;
+    --footer-link-hover: #ffdead; /* A lighter, more complementary hover color */
+    --body-bg-color: #eef8ff;
+    --font-primary: "Poppins", sans-serif;
+}
+
+/* --- Global Reset and Font Settings --- */
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Times New Roman", Times, serif;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Background Color for the Body */
 body {
-  background-color: #eef8ff;
+    background-color: var(--body-bg-color);
+    font-family: var(--font-primary);
 }
 
-/* Footer Container Styling */
+/* --- Footer Container --- */
 .footer {
-  width: 100%;
-  background: linear-gradient(to right, rgb(150, 106, 23), #fbcf6f);
-  color: #fff;
-  padding: 60px 20px 30px;
-  border-top-left-radius: 80px;
-  font-size: 13px;
-  margin-top: 148px;
+    width: 100%;
+    background: var(--footer-gradient);
+    color: var(--footer-text-color);
+    /* IMPROVEMENT: Responsive padding */
+    padding: 60px clamp(1rem, 5vw, 4rem) 30px;
+    /* IMPROVEMENT: A slightly more subtle border-radius */
+    border-top-left-radius: 65px;
+    font-size: 14px;
+    /* This pushes the footer down. Consider managing this space on the element above the footer. */
+    margin-top: 148px;
 }
-.footer p {
-  font-family: "Poppins", serif;
 
-}
-/* Footer Layout using Flexbox */
+/* --- Footer Layout --- */
 .footer-content {
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Set a max-width for very large screens */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* IMPROVEMENT: Use gap for consistent spacing between columns */
+    gap: 2rem;
 }
 
-/* Column Styling for Responsive Layout */
 .footer-col {
-  flex-basis: 100%;
-  margin: 10px 0;
+    /* Each column will take up the full width on mobile */
+    flex-grow: 1;
+    flex-basis: 100%;
 }
 
-/* Footer Logo and Description Styling */
+/* --- Logo and Description --- */
 .logo-footer {
-  width: 180px;
-  height: auto;
-  margin-bottom: 10px;
+    width: 180px;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 .footer-description {
-  font-size: 20px;
-  line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 350px; /* Prevents text from stretching too far */
 }
 
-/* Social Media Icons Styling */
-.social-icons{
-  margin-top: 1rem;
+/* --- Social Media Icons --- */
+.social-icons {
+    margin-top: 1.5rem;
+    display: flex; /* Use flex to align icons */
+    gap: 10px;
 }
+
 .social-icons a {
-  display: inline-block; 
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 35px;
-  /* font-size: 18px; */
-  color: #000;
-  background: #fff;
-  margin-right: 10px; 
-  transition: all 0.3s ease; 
+    /* IMPROVEMENT: Use flexbox for perfect centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #fff;
-  background: rgb(150, 106, 23);
+    color: #fff;
+    background: var(--footer-bg-hover);
+    transform: translateY(-3px); /* Add a subtle lift effect */
 }
 
-/* Column Heading Styling */
+/* --- Section Headings --- */
 .footer-col h3 {
-  font-size: 16px;
-  margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
 }
 
-/* Contact Details and Email Styling */
-.contact-col p {
-  margin: 5px 0;
-}
-.contact-col p a{
-  color: #eef8ff;
-  font-size: 14px;
-}
-.email-id {
-  display: inline-block;
-  border-bottom: 1px solid #ccc;
-  margin: 5px 0;
-}
-
-/* Link Styles */
+/* --- Links and Contact Info --- */
 .footer-links {
-  list-style: none;
-  padding: 0;
+    list-style: none;
 }
 
 .footer-links li {
-  margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-.footer-links li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-  transition: color 0.3s ease;
+.footer-links a,
+.contact-col p a {
+    text-decoration: none;
+    color: var(--footer-text-color);
+    transition: color 0.3s ease;
 }
 
-.footer-links li a:hover {
-  color: #fbcf6f;
+.footer-links a:hover,
+.contact-col p a:hover {
+    color: var(--footer-link-hover);
+    padding-left: 5px; /* Nudge text on hover */
 }
 
-.map-col{
-  width: 100%;
-  min-width: 250px;
-  border-radius: 4px;
-  margin-inline: auto;
-}
-.map-col h3, .footer-col h3{
-  font-family: "Poppins", serif;
+.email-id {
+    display: inline-block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 10px;
 }
 
-/* Map Styling */
+/* --- Map --- */
 .location-map {
-  width: 100%;
-  /* max-width: 300px; */
-  height: 300px;
-  border: none;
-  margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 8px; /* Give the map rounded corners */
+    margin-top: 10px;
 }
+
+
+/* --- RESPONSIVE STYLES --- */
+
+/* For Small Tablets */
 @media screen and (min-width: 624px) {
-  .footer-col{
-    flex-basis: 23%;
-  }
-  .footer-content, .map-col{
-    width: 85%;
-  }
+    .footer-col {
+        /* Creates a two-column layout */
+        flex-basis: 45%;
+    }
+}
+
+/* For Desktops and Larger Tablets */
+@media screen and (min-width: 992px) {
+    .footer-col {
+        /* Creates a four-column layout */
+        flex-basis: 22%;
+    }
 }

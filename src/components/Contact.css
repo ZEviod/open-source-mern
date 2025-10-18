@@ -1,135 +1,185 @@
+/* --- CSS Variables for Easy Theming --- */
+:root {
+    --bg-color: #e9d8fd;
+    --card-bg-color: #ffffff;
+    --primary-blue: #3b82f6;
+    --primary-blue-hover: #2563eb;
+    --text-color-primary: #1e293b;
+    --text-color-secondary: #64748b;
+    --border-color: #e5e7eb;
+    --focus-color: #a5b4fc;
+}
+
+/* --- Main Container --- */
 .contact-container {
-  min-height: 80vh;
-  background-color: #e9d8fd; /* Light purple background */
-  padding: 1rem;
+    min-height: 80vh;
+    background-color: var(--bg-color);
+    /* IMPROVEMENT: Responsive padding for better spacing on all screen sizes */
+    padding: clamp(1.5rem, 5vw, 3rem);
+    font-family: sans-serif; /* Added a default font family */
 }
 
+/* --- Layout --- */
 .contact-content {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    /* IMPROVEMENT: Added a gap for spacing between columns */
+    gap: 2rem;
 }
 
+/* --- Left Side: Contact Info --- */
 .contact-info {
-  width: 50%;
-  padding: 2rem;
+    width: 50%;
+    padding-right: 2rem; /* Spacing from the form */
 }
 
 .contact-title {
-  font-size: 4rem;
-  font-weight: 600;
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--text-color-primary);
 }
 
 .contact-description {
-  width: 22rem;
-  color: #64748b; /* Slate color */
+    /* IMPROVEMENT: Use max-width to allow shrinking on smaller screens */
+    max-width: 25rem;
+    color: var(--text-color-secondary);
+    margin-top: 1rem;
+    line-height: 1.6;
 }
 
 .contact-email,
-.contact-phone,
-.support-link {
-  margin: 1rem 0;
-  color: #64748b;
+.contact-phone {
+    /* IMPROVEMENT: Added icons for better visual communication */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    color: var(--text-color-secondary);
 }
 
 .support-sections {
-  margin-top: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2.5rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
 }
 
 .support-item {
-  width: 15rem;
+    width: 15rem;
 }
 
 .support-title {
-  font-weight: 600;
-  font-size: 1.2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--text-color-primary);
 }
 
 .support-text {
-  font-size: 0.9rem;
-  color: #64748b;
+    font-size: 0.9rem;
+    color: var(--text-color-secondary);
+    line-height: 1.5;
 }
 
+/* --- Right Side: Contact Form --- */
 .contact-form {
-  width: 50%;
-  padding: 1.5rem;
-  background-color: white;
-  border-radius: 1rem;
-}
-
-.form-header {
-  margin-bottom: 1rem;
+    width: 50%;
+    padding: 2.5rem; /* Increased padding for a more spacious feel */
+    background-color: var(--card-bg-color);
+    border-radius: 1rem;
+    /* IMPROVEMENT: Added a subtle shadow to lift the form off the page */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .form-title {
-  font-size: 2.3rem;
-  font-weight: 600;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: var(--text-color-primary);
 }
 
 .form-subtitle {
-  color: #64748b;
+    color: var(--text-color-secondary);
+    margin-bottom: 2rem;
 }
 
 .form-fields {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.input-container {
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Increased gap for better separation */
 }
 
 .input,
 .textarea {
-  width: 100%;
-  padding: 9px 10px;
-  border: 2px solid #e5e7eb;
-  border-radius: 9999px;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color); /* Softened the border */
+    border-radius: 0.5rem; /* A more standard, modern border-radius */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth focus transition */
 }
 
 .input:focus,
 .textarea:focus {
-  outline-color: #a5b4fc; /* Focus color */
+    outline: none;
+    border-color: var(--focus-color);
+    box-shadow: 0 0 0 3px rgba(165, 180, 252, 0.5); /* A modern focus ring */
 }
 
 .textarea {
-  border-radius: 20px;
+    min-height: 120px; /* Set a minimum height */
+    resize: vertical; /* Allow vertical resizing */
 }
 
 .submit-button {
-  width: 100%;
-  padding: 1rem;
-  border-radius: 9999px;
-  background-color: #3b82f6; /* Blue background */
-  color: white;
-  font-weight: 600;
-  font-size: 1.125rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-blue);
+    color: white;
+    font-weight: 600;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .submit-button:hover {
-  background-color: #2563eb; /* Darker blue on hover */
+    background-color: var(--primary-blue-hover);
 }
 
-.form-error {
-  color: #b91c1c; /* red */
-  background: #fee2e2;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+/* --- Form Status Messages --- */
+.form-error, .form-success, .form-sending {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
 }
+.form-error { color: #b91c1c; background: #fee2e2; }
+.form-success { color: #065f46; background: #d1fae5; }
+.form-sending { color: #1e293b; background: #f1f5f9; }
 
-.form-success {
-  color: #065f46; /* green */
-  background: #ecfccb;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-}
 
-.form-sending {
-  color: #1e293b;
+/* --- RESPONSIVE STYLES --- */
+@media screen and (max-width: 992px) {
+    .contact-content {
+        /* Stacks the columns on top of each other */
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        /* Both sections take up the full width */
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact-form {
+        padding: 2rem; /* Maintain padding on the form itself */
+    }
+
+    .contact-title {
+        font-size: 3rem; /* Reduce title size on smaller screens */
+    }
+
+    .form-title {
+        font-size: 2rem;
+    }
 }

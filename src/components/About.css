@@ -1,58 +1,21 @@
-.nav_links1 {
-  list-style: none;
-  background-color: rgb(223, 163, 84);
-  padding: 8px 12px;
-  border-radius: 4px;
-  color: #eee;
-  font-weight: 500;
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  font-family: "Poppins", serif;
-  font-style: normal;
-}
 
-
-.nav_links1:hover {
-  background-color: rgb(223, 172, 106);
-}
-
-
-.button-50 {
-  background-color: rgb(0, 0, 0);
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  /* margin: 50px 5px 10px 0; */
-  overflow: visible;
-  font-size: 24px;
-  text-align: center;
-  vertical-align: middle;
-  padding: 12px 20px;
-}
-
-.button-50:hover {
-  transition: 1s;
-  background-color: #aaaaaa;
-  color: #000;
-  border-radius: 8px;
-}
-
+/* General Body and Font Styles */
 body {
   background-color: #fffdd0;
   margin: 0;
   font-family: "Poppins", serif;
 }
 
-/* About Section */
+/* --- About Section --- */
 .about {
-  height: calc(100dvh - 72px);
+ /* Using dvh unit for better mobile viewport handling */
+ height: calc(100dvh - 72px);
   width: 100%;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.3)
-    ),
-    url(../../public/images/heroBg.jpg);
+ background: linear-gradient(
+ rgba(0, 0, 0, 0.65),
+ rgba(0, 0, 0, 0.3)
+ ),
+  url(../../public/images/heroBg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -75,24 +38,31 @@ body {
   padding: 1rem;
 }
 
-/* Text Block */
+/* --- IMPROVEMENT: Glassmorphism Effect on Text Block --- */
 .text {
-  display: flex;
-  flex-direction: column;
+ display: flex;
+ flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   padding: 1.5rem;
-  border-radius: 12px;
+  border-radius: 16px; /* Slightly increased for a softer look */
 
+  /* Added for the glass effect */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(8px); /* The blur effect! */
+  -webkit-backdrop-filter: blur(8px); /* For Safari compatibility */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle edge highlight */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
-
 
 .text h1,
 .text p {
   font-family: "Poppins", serif;
   color: #fff;
   text-align: center;
+  /* Add a subtle text shadow for better readability on the blurred background */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .text h1 {
@@ -107,7 +77,8 @@ body {
   opacity: 0.95;
 }
 
-/* Button Styling */
+/* --- Button Styling --- */
+/* Note: The first, duplicate .nav_links1 block was removed */
 .nav_links1 {
   list-style: none;
   background-color: rgb(223, 163, 84);
@@ -121,16 +92,15 @@ body {
   font-family: "Poppins", serif;
   transition: all 0.3s ease;
   margin-top: 1rem;
+  cursor: pointer; /* Added for better UX */
 }
 
 .nav_links1:hover {
   background-color: rgb(223, 172, 106);
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
 }
 
-/* Optional additional button style */
 .button-50 {
   background-color: rgb(0, 0, 0);
   box-sizing: border-box;
@@ -153,16 +123,17 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Styling */
+/* --- Responsive Styling --- */
 @media screen and (min-width: 640px) {
   .container {
-    width: 60%;
+    width: 80%; /* Adjusted for better spacing with the new text box */
+    max-width: 700px;
   }
   .text h1 {
-    font-size: 2.5rem;
+   font-size: 2.5rem;
   }
-  .text p {
-    font-size: 1.2rem;
-    line-height: 2rem;
-  }
+ .text p {
+   font-size: 1.2rem;
+  line-height: 2rem;
+ }
 }
